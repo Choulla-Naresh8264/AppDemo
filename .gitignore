@@ -52,3 +52,4 @@ Temporary Items
 **/obj/
 */packages/
 */bower_components/
+**/.vs/
