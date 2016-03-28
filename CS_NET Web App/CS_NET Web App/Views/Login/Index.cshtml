@@ -1,0 +1,29 @@
+﻿@model CS_NET_Web_App.Models.LoginVM
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Login</h2>
+
+@using (Html.BeginForm())
+{
+  if (ViewBag.ErrorMessage != null)
+  {
+    <div style="color:red">@ViewBag.ErrorMessage</div>
+  }
+  <fieldset>
+    <div>Username :  </div>
+    <div>@Html.EditorFor(Model => Model.Username)</div>
+    <div>Password :  </div>
+    <div>@Html.PasswordFor(Model => Model.Password)</div>
+    <div><button type="submit">Login</button></div>
+  </fieldset>
+}
+
+<style>
+  fieldset div {
+    margin-bottom: 1em;
+  }
+</style>
